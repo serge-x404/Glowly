@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Discover.Book.Rock On"
-            style="@style/TextAppearance.Aurea.LabelMedium"
+            style="@style/TextAppearance.Aurea.LabelLarge"
             android:textStyle="bold"/>
 
     </LinearLayout>
