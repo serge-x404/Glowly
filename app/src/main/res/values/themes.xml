@@ -3,7 +3,7 @@
     <style name="Base.Theme.SkinCare" parent="Theme.Material3.DayNight.NoActionBar">
 
         <!-- Primary -->
-        <item name="colorPrimary">@color/md_theme_green_70</item>
+        <item name="colorPrimary">@color/md_theme_green_40</item>
         <item name="colorOnPrimary">@color/md_theme_neutral_10</item>
         <item name="colorPrimaryContainer">@color/md_theme_green_50</item>
         <item name="colorOnPrimaryContainer">@color/md_theme_neutral_100</item>

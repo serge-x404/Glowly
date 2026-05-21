@@ -1,8 +1,6 @@
-<!-- typography.xml -->
-
 <resources>
 
-    <style name="TextAppearance.Aurea.DisplayLarge">
+    <style name="TextAppearance.Aurea.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">48sp</item>
         <item name="android:lineHeight">58sp</item>
@@ -10,7 +8,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.DisplayMedium">
+    <style name="TextAppearance.Aurea.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">42sp</item>
         <item name="android:lineHeight">53sp</item>
@@ -18,7 +16,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.DisplaySmall">
+    <style name="TextAppearance.Aurea.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">36sp</item>
         <item name="android:lineHeight">46sp</item>
@@ -26,11 +24,9 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <!-- ========================================================= -->
     <!-- HEADLINE -->
-    <!-- ========================================================= -->
 
-    <style name="TextAppearance.Aurea.HeadlineLarge">
+    <style name="TextAppearance.Aurea.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">32sp</item>
         <item name="android:lineHeight">40sp</item>
@@ -38,7 +34,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.HeadlineMedium">
+    <style name="TextAppearance.Aurea.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">28sp</item>
         <item name="android:lineHeight">36sp</item>
@@ -46,7 +42,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.HeadlineSmall">
+    <style name="TextAppearance.Aurea.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">24sp</item>
         <item name="android:lineHeight">32sp</item>
@@ -54,11 +50,9 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <!-- ========================================================= -->
     <!-- TITLE -->
-    <!-- ========================================================= -->
 
-    <style name="TextAppearance.Aurea.TitleLarge">
+    <style name="TextAppearance.Aurea.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">22sp</item>
         <item name="android:lineHeight">28sp</item>
@@ -66,7 +60,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.TitleMedium">
+    <style name="TextAppearance.Aurea.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">18sp</item>
         <item name="android:lineHeight">24sp</item>
@@ -74,7 +68,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.TitleSmall">
+    <style name="TextAppearance.Aurea.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">22sp</item>
@@ -82,11 +76,9 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <!-- ========================================================= -->
     <!-- BODY -->
-    <!-- ========================================================= -->
 
-    <style name="TextAppearance.Aurea.BodyLarge">
+    <style name="TextAppearance.Aurea.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">16sp</item>
         <item name="android:lineHeight">24sp</item>
@@ -94,7 +86,7 @@
         <item name="android:textColor">@color/on_surface</item>
     </style>
 
-    <style name="TextAppearance.Aurea.BodyMedium">
+    <style name="TextAppearance.Aurea.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">14sp</item>
         <item name="android:lineHeight">21sp</item>
@@ -102,7 +94,7 @@
         <item name="android:textColor">@color/on_surface</item>
     </style>
 
-    <style name="TextAppearance.Aurea.BodySmall">
+    <style name="TextAppearance.Aurea.BodySmall" parent="TextAppearance.Material3.BodySmall">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">13sp</item>
         <item name="android:lineHeight">18sp</item>
@@ -110,11 +102,9 @@
         <item name="android:textColor">@color/on_surface</item>
     </style>
 
-    <!-- ========================================================= -->
     <!-- LABEL -->
-    <!-- ========================================================= -->
 
-    <style name="TextAppearance.Aurea.LabelLarge">
+    <style name="TextAppearance.Aurea.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">14sp</item>
         <item name="android:lineHeight">20sp</item>
@@ -122,7 +112,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.LabelMedium">
+    <style name="TextAppearance.Aurea.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">12sp</item>
         <item name="android:lineHeight">16sp</item>
@@ -130,7 +120,7 @@
         <item name="android:textColor">@color/on_background</item>
     </style>
 
-    <style name="TextAppearance.Aurea.LabelSmall">
+    <style name="TextAppearance.Aurea.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
         <item name="android:fontFamily">@font/plus_jakarta</item>
         <item name="android:textSize">11sp</item>
         <item name="android:lineHeight">14sp</item>
