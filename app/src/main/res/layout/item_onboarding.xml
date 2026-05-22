@@ -22,14 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="20dp"
-            style="@style/TextAppearance.Aurea.TitleLarge"/>
-
-        <Button
-            android:id="@+id/onBoardingButtonText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"/>
+            android:layout_marginBottom="80dp"
+            style="@style/TextAppearance.Aurea.HeadlineLarge"/>
 
     </LinearLayout>
 

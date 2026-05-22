@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import dev.serge.skincare.MainActivity
 import dev.serge.skincare.R
+import dev.serge.skincare.authentication.Authentication
 import dev.serge.skincare.databinding.ActivityOnBoardingBinding
 import dev.serge.skincare.databinding.ActivitySplashBinding
 import dev.serge.skincare.databinding.FragmentOnBoardingfragmentBinding
@@ -62,19 +63,37 @@ class OnBoardingFragment : Fragment() {
                 "Continue"
             )
         )
-        val adapter = OnBoardingAdapter(onBoardingPagerData) {
-            val nextItem = binding.onBoardingPager.currentItem + 1
-
-            if (nextItem < onBoardingPagerData.size) {
-                binding.onBoardingPager.currentItem = nextItem
-            } else {
-                startActivity(
-                    Intent(requireContext(), MainActivity::class.java)
-                )
-            }
-        }
+        val adapter = OnBoardingAdapter(onBoardingPagerData)
         binding.onBoardingPager.adapter = adapter
         binding.onBoardingPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        binding.onBoardingButton.setOnClickListener {
+            val currentPage = binding.onBoardingPager.currentItem
+            val lastPage = onBoardingPagerData.size - 1
+
+            if (currentPage < lastPage) {
+                binding.onBoardingPager.currentItem = currentPage + 1
+            } else {
+                startActivity(
+                    Intent(requireContext(), Authentication::class.java)
+                )
+                requireActivity().finish()
+            }
+        }
+        binding.onBoardingPager.registerOnPageChangeCallback(
+            object : ViewPager2.OnPageChangeCallback() {
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+
+                    val lastPage = onBoardingPagerData.size - 1
+
+                    if (position == lastPage) {
+                        binding.onBoardingButton.text = "Continue"
+                    } else {
+                        binding.onBoardingButton.text = "Next"
+                    }
+                }
+            }
+        )
         return root
     }
 

@@ -9,14 +9,12 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.serge.skincare.R
 
 class OnBoardingAdapter(
-    private val list: List<OnBoardingDataClass>,
-    private val onNextClick: () -> Unit
+    private val list: List<OnBoardingDataClass>
 ): RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>() {
 
     class OnBoardingViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val image = view.findViewById<ImageView>(R.id.onBoardingImage)
         val text = view.findViewById<TextView>(R.id.onBoardingText)
-        val buttonText = view.findViewById<TextView>(R.id.onBoardingButtonText)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OnBoardingViewHolder {
@@ -34,10 +32,6 @@ class OnBoardingAdapter(
 
         holder.image.setImageResource(item.image)
         holder.text.text = item.text
-        holder.buttonText.text = item.buttonContent
-        holder.buttonText.setOnClickListener {
-            onNextClick()
-        }
     }
 
     override fun getItemCount(): Int {
