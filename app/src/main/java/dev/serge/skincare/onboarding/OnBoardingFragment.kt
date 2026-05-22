@@ -2,13 +2,18 @@
 
 package dev.serge.skincare.onboarding
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
+import dev.serge.skincare.MainActivity
 import dev.serge.skincare.R
+import dev.serge.skincare.databinding.ActivityOnBoardingBinding
 import dev.serge.skincare.databinding.ActivitySplashBinding
+import dev.serge.skincare.databinding.FragmentOnBoardingfragmentBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +28,7 @@ private const val ARG_PARAM2 = "param2"
 class OnBoardingFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var binding: ActivitySplashBinding
+    lateinit var binding: FragmentOnBoardingfragmentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +42,7 @@ class OnBoardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = ActivitySplashBinding.inflate(layoutInflater)
+        binding = FragmentOnBoardingfragmentBinding.inflate(layoutInflater)
         val root = binding.root
 
         val onBoardingPagerData = listOf(
@@ -57,7 +62,19 @@ class OnBoardingFragment : Fragment() {
                 "Continue"
             )
         )
+        val adapter = OnBoardingAdapter(onBoardingPagerData) {
+            val nextItem = binding.onBoardingPager.currentItem + 1
 
+            if (nextItem < onBoardingPagerData.size) {
+                binding.onBoardingPager.currentItem = nextItem
+            } else {
+                startActivity(
+                    Intent(requireContext(), MainActivity::class.java)
+                )
+            }
+        }
+        binding.onBoardingPager.adapter = adapter
+        binding.onBoardingPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         return root
     }
 
