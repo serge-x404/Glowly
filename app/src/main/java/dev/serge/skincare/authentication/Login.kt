@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.replace
+import androidx.transition.Visibility
 import dev.serge.skincare.R
 import dev.serge.skincare.databinding.FragmentLoginBinding
 
@@ -47,6 +48,25 @@ class Login : Fragment() {
                 )
                 .addToBackStack(null)
                 .commit()
+        }
+        binding.emailFrag.isSelected = true
+        binding.phoneFrag.isSelected = false
+        binding.displayText.text = "Email"
+        binding.emailLogin.visibility = View.VISIBLE
+        binding.phoneLogin.visibility = View.GONE
+        binding.emailFrag.setOnClickListener {
+            binding.displayText.text = "Email"
+            binding.emailLogin.visibility = View.VISIBLE
+            binding.phoneLogin.visibility = View.GONE
+            binding.emailFrag.isSelected = true
+            binding.phoneFrag.isSelected = false
+        }
+        binding.phoneFrag.setOnClickListener {
+            binding.displayText.text = "Phone Number"
+            binding.emailLogin.visibility = View.GONE
+            binding.phoneLogin.visibility = View.VISIBLE
+            binding.emailFrag.isSelected = false
+            binding.phoneFrag.isSelected = true
         }
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()

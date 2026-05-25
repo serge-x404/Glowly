@@ -60,41 +60,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:hint="Enter your name"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:background="@drawable/input_bg"
+            android:padding="12dp"/>
 
         <TextView
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="Email" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:hint="Enter your email address"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:background="@drawable/input_bg"
+            android:padding="12dp"/>
 
         <TextView
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:text="Password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:hint="Enter your password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="@drawable/input_bg"
+            android:padding="12dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
