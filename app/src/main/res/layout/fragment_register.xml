@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:contentDescription="Back navigation"
             android:src="@drawable/back_button"
-            android:backgroundTint="@color/md_theme_green_40"
+            android:background="@drawable/circle"
+            android:padding="8dp"
             android:layout_marginStart="20dp"
             android:layout_marginBottom="10dp" />
 

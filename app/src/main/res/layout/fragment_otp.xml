@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.Login">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:paddingBottom="20dp"
+        android:background="@drawable/auth_bg">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Back navigation"
+            android:src="@drawable/back_button"
+            android:background="@drawable/circle"
+            android:padding="8dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verify Code"
+            style="@style/TextAppearance.Aurea.HeadlineLarge"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please enter the code we just sent to your number (907)55-0101"
+            style="@style/TextAppearance.Aurea.TitleSmall"
+            android:gravity="start"
+            android:layout_marginHorizontal="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="30dp">
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"/>
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"
+                android:layout_marginHorizontal="4dp"/>
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"
+                android:layout_marginHorizontal="4dp"/>
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"
+                android:layout_marginHorizontal="4dp"/>
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"
+                android:layout_marginHorizontal="4dp"/>
+
+            <EditText
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:background="@drawable/input_bg"
+                android:layout_marginHorizontal="4dp"/>
+
+        </LinearLayout>
+
+        <Button
+            style="@style/TextAppearance.Aurea.HeadlineSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="Continue" />
+
+    </LinearLayout>
+
+</FrameLayout>

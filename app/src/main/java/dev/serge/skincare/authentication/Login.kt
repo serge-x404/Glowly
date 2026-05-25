@@ -71,6 +71,15 @@ class Login : Fragment() {
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
         }
+        binding.passwordLogin.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(
+                    R.id.authenticationFragment,
+                    ForgotPassword()
+                )
+                .addToBackStack(null)
+                .commit()
+        }
         return root
     }
 
