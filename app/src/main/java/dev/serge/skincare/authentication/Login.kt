@@ -1,5 +1,6 @@
 package dev.serge.skincare.authentication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.replace
 import androidx.transition.Visibility
 import dev.serge.skincare.R
+import dev.serge.skincare.account_setup.AccountSetup
 import dev.serge.skincare.databinding.FragmentLoginBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -79,6 +81,11 @@ class Login : Fragment() {
                 )
                 .addToBackStack(null)
                 .commit()
+        }
+        binding.loginButton.setOnClickListener {
+            startActivity(
+                Intent(requireContext(), AccountSetup::class.java)
+            )
         }
         return root
     }

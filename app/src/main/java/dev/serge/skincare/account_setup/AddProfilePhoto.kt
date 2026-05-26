@@ -39,6 +39,9 @@ class AddProfilePhoto : Fragment() {
     ): View {
         binding = FragmentAddProfilePhotoBinding.inflate(layoutInflater)
         val root = binding.root
+        binding.backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
         return root
     }
 

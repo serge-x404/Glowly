@@ -73,7 +73,7 @@
             android:gravity="bottom">
 
             <Button
-                android:id="@+id/createNewPassword"
+                android:id="@+id/proceedButton"
                 style="@style/TextAppearance.Aurea.TitleMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

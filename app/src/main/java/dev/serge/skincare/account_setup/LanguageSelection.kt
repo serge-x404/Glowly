@@ -51,11 +51,22 @@ class LanguageSelection : Fragment() {
 
         val adapter = ArrayAdapter(
             requireContext(),
-            R.layout.fragment_language_selection,
+            android.R.layout.simple_dropdown_item_1line,
             languages
         )
-
         binding.languageDropdown.setAdapter(adapter)
+        binding.proceedButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(
+                    R.id.accountSetupContainer,
+                    SelectLocation()
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
         return root
     }
 

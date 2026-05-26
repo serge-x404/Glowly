@@ -39,6 +39,18 @@ class SelectLocation : Fragment() {
     ): View {
         binding = FragmentSelectLocationBinding.inflate(layoutInflater)
         val root = binding.root
+        binding.proceedButton.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(
+                    R.id.accountSetupContainer,
+                    AddProfilePhoto()
+                )
+                .addToBackStack(null)
+                .commit()
+        }
+        binding.backButton.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
         return root
     }
 

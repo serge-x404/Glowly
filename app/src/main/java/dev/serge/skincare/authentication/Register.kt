@@ -1,5 +1,6 @@
 package dev.serge.skincare.authentication
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
@@ -12,6 +13,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.replace
 import dev.serge.skincare.R
 import dev.serge.skincare.databinding.FragmentRegisterBinding
+import androidx.core.graphics.toColorInt
+import dev.serge.skincare.account_setup.AccountSetup
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,7 +49,7 @@ class Register : Fragment() {
 
         val text = "By creating an account, you agree to our Terms and Conditions and Privacy Notice."
         val spannable = SpannableString(text)
-        val pink = Color.parseColor("#F2B7C0")
+        val pink = "#F2B7C0".toColorInt()
 
         spannable.setSpan(
             ForegroundColorSpan(pink),
@@ -73,6 +76,9 @@ class Register : Fragment() {
         }
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
+        }
+        binding.registerButton.setOnClickListener {
+            startActivity(Intent(requireContext(), AccountSetup::class.java))
         }
         return root
     }

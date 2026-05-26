@@ -146,6 +146,7 @@
             android:textColor="@color/md_theme_green_40" />
 
         <Button
+            android:id="@+id/loginButton"
             style="@style/TextAppearance.Aurea.HeadlineSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

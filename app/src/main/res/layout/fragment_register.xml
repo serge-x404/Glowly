@@ -125,6 +125,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/registerButton"
             style="@style/TextAppearance.Aurea.HeadlineSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
