@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkinCare">
         <activity
+            android:name=".account_setup.AccountSetup"
+            android:exported="false" />
+        <activity
             android:name=".authentication.Authentication"
             android:exported="false" />
         <activity

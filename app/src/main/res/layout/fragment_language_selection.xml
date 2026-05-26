@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentication.Authentication">
+    tools:context=".account_setup.AccountSetup">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="6dp"
             android:gravity="start"
-            android:text="New Password" />
+            android:text="Select your Language" />
 
         <TextView
             style="@style/TextAppearance.Aurea.TitleSmall"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:gravity="start"
-            android:text="Create a new password that is safe and easy to remember" />
+            android:text="Select your preferred language to customize your travel experience." />
 
     </LinearLayout>
 
@@ -56,39 +56,26 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="30dp"
-            android:text="New Password" />
+            android:text="Language" />
 
 
-        <EditText
-            android:id="@+id/password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/languageInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="20dp"
             android:layout_marginTop="4dp"
             android:background="@drawable/input_bg"
-            android:hint="Enter password"
-            android:inputType="textVisiblePassword"
-            android:padding="12dp" />
-
-        <TextView
-            style="@style/TextAppearance.Aurea.TitleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="14dp"
-            android:text="Confirm new Password" />
-
-
-        <EditText
-            android:id="@+id/confirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/input_bg"
-            android:hint="Enter password"
-            android:inputType="textVisiblePassword"
-            android:padding="12dp" />
+            android:hint="Select Language"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            
+            <AutoCompleteTextView
+                android:id="@+id/languageDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none"/>
+            
+        </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -98,12 +85,12 @@
 
             <Button
                 android:id="@+id/createNewPassword"
-                style="@style/TextAppearance.Aurea.TitleSmall"
+                style="@style/TextAppearance.Aurea.TitleMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="30dp"
-                android:text="Create New Password" />
+                android:text="Continue" />
 
         </LinearLayout>
 

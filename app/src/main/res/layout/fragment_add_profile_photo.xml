@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentication.Authentication">
+    tools:context=".account_setup.AccountSetup">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_marginHorizontal="30dp"
             android:layout_marginBottom="6dp"
             android:gravity="start"
-            android:text="New Password" />
+            android:text="Add a Profile Photo" />
 
         <TextView
             style="@style/TextAppearance.Aurea.TitleSmall"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:gravity="start"
-            android:text="Create a new password that is safe and easy to remember" />
+            android:text="Add a photo to personalize your profile and make your experience more engaging." />
 
     </LinearLayout>
 
@@ -50,60 +50,36 @@
         android:layout_marginTop="180dp"
         android:orientation="vertical">
 
-        <TextView
-            style="@style/TextAppearance.Aurea.TitleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginTop="30dp"
-            android:text="New Password" />
-
-
-        <EditText
-            android:id="@+id/password"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/input_bg"
-            android:hint="Enter password"
-            android:inputType="textVisiblePassword"
-            android:padding="12dp" />
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1">
 
-        <TextView
-            style="@style/TextAppearance.Aurea.TitleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="14dp"
-            android:text="Confirm new Password" />
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:contentDescription="User Profile"
+                android:src="@drawable/user"
+                android:layout_gravity="center_horizontal"/>
 
-
-        <EditText
-            android:id="@+id/confirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="4dp"
-            android:background="@drawable/input_bg"
-            android:hint="Enter password"
-            android:inputType="textVisiblePassword"
-            android:padding="12dp" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="bottom">
 
             <Button
                 android:id="@+id/createNewPassword"
-                style="@style/TextAppearance.Aurea.TitleSmall"
+                style="@style/TextAppearance.Aurea.TitleMedium"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
                 android:layout_marginTop="30dp"
-                android:text="Create New Password" />
+                android:text="Continue" />
 
         </LinearLayout>
 

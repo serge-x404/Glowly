@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentication.Login">
+    tools:context=".authentication.Authentication">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,13 +105,21 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/passwordChange"
-            style="@style/TextAppearance.Aurea.HeadlineSmall"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
-            android:text="Continue" />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/passwordChange"
+                style="@style/TextAppearance.Aurea.TitleSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:text="Continue" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
