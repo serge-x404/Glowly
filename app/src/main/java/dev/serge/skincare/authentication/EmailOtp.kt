@@ -1,13 +1,12 @@
 package dev.serge.skincare.authentication
 
-import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import dev.serge.skincare.R
-import dev.serge.skincare.databinding.FragmentForgotPasswordBinding
+import dev.serge.skincare.databinding.FragmentEmailOtpBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -16,14 +15,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ForgotPassword.newInstance] factory method to
+ * Use the [EmailOtp.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ForgotPassword : Fragment() {
+class EmailOtp : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    lateinit var binding: FragmentForgotPasswordBinding
+    lateinit var binding: FragmentEmailOtpBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,38 +36,19 @@ class ForgotPassword : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentForgotPasswordBinding.inflate(layoutInflater)
+        binding = FragmentEmailOtpBinding.inflate(layoutInflater)
         val root = binding.root
-        binding.email.setOnClickListener {
-            binding.mailImg.isSelected = true
-            binding.phoneImg.isSelected = false
-            binding.proceedButton.visibility = View.VISIBLE
-            binding.proceedButton.setOnClickListener {
-                parentFragmentManager.beginTransaction()
-                    .replace(
-                        R.id.authenticationFragment,
-                        EmailOtp()
-                    )
-                    .addToBackStack(null)
-                    .commit()
-            }
-        }
-        binding.phoneNumber.setOnClickListener {
-            binding.mailImg.isSelected = false
-            binding.phoneImg.isSelected = true
-            binding.proceedButton.visibility = View.VISIBLE
-            binding.proceedButton.setOnClickListener {
-                parentFragmentManager.beginTransaction()
-                    .replace(
-                        R.id.authenticationFragment,
-                        Otp()
-                    )
-                    .addToBackStack(null)
-                    .commit()
-            }
-        }
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
+        }
+        binding.passwordChange.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(
+                    R.id.authenticationFragment,
+                    ChangePassword()
+                )
+                .addToBackStack(null)
+                .commit()
         }
         return root
     }
@@ -80,12 +60,12 @@ class ForgotPassword : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ForgotPassword.
+         * @return A new instance of fragment EmailOtp.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ForgotPassword().apply {
+            EmailOtp().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

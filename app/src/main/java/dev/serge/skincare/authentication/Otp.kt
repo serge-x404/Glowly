@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.replace
 import dev.serge.skincare.R
 import dev.serge.skincare.databinding.FragmentOtpBinding
 
@@ -40,6 +41,15 @@ class Otp : Fragment() {
         val root = binding.root
         binding.backButton.setOnClickListener {
             parentFragmentManager.popBackStack()
+        }
+        binding.passwordChange.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(
+                    R.id.authenticationFragment,
+                    ChangePassword()
+                )
+                .addToBackStack(null)
+                .commit()
         }
         return root
     }

@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please enter the code we just sent to your number (907)55-0101"
+            android:text="Please enter the code we just sent to your email wilson09@gmail.com"
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:gravity="start"
             android:layout_marginHorizontal="30dp"/>
