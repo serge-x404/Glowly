@@ -38,8 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Join us today and unlock endless possibilities. It’s quick, easy, and just a step away!"
             style="@style/TextAppearance.Aurea.TitleSmall"
-            android:gravity="center"
-            android:layout_marginHorizontal="30dp"/>
+            android:gravity="center"/>
 
     </LinearLayout>
 
@@ -53,14 +52,14 @@
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="40dp"
             android:text="Full Name"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="8dp"
             android:hint="Enter your name"
             android:inputType="textPersonName"
@@ -71,32 +70,32 @@
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="16dp"
             android:text="Email" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="8dp"
+            android:background="@drawable/input_bg"
             android:hint="Enter your email address"
             android:inputType="textEmailAddress"
-            android:background="@drawable/input_bg"
-            android:padding="12dp"/>
+            android:padding="12dp" />
 
         <TextView
             style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="16dp"
             android:text="Password" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="8dp"
             android:hint="Enter your password"
             android:inputType="textPassword"
@@ -107,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginHorizontal="40dp"
+            android:layout_marginHorizontal="0dp"
             android:layout_marginTop="20dp"
             android:gravity="center_vertical">
 
@@ -126,7 +125,7 @@
 
         <Button
             android:id="@+id/registerButton"
-            style="@style/TextAppearance.Aurea.HeadlineSmall"
+            style="@style/TextAppearance.Aurea.TitleSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
