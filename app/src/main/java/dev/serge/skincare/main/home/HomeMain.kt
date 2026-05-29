@@ -1,4 +1,4 @@
-package dev.serge.skincare.home
+package dev.serge.skincare.main.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -82,7 +82,7 @@ class HomeMain : Fragment() {
         val dailyRoutineAdapter = DailyRoutineAdapter(dailyRoutineList)
         binding.dailyRoutineRecycler.layoutManager =
             GridLayoutManager(requireContext(),1)
-        binding.skinConditionRecycler.adapter = dailyRoutineAdapter
+        binding.dailyRoutineRecycler.adapter = dailyRoutineAdapter
         return root
     }
 

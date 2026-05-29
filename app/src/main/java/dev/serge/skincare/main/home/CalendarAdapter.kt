@@ -1,4 +1,4 @@
-package dev.serge.skincare.home
+package dev.serge.skincare.main.home
 
 import android.view.LayoutInflater
 import android.view.View

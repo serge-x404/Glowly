@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="170dp"
     android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp">
     
     <LinearLayout
@@ -50,14 +50,15 @@
             android:layout_width="match_parent"
             android:layout_height="18dp"/>
         
-        <ProgressBar
+        <com.google.android.material.progressindicator.LinearProgressIndicator
             android:id="@+id/progressBar"
             android:layout_width="match_parent"
             android:layout_height="6dp"
             android:max="100"
             android:progress="85"
-            android:progressTint="#FFD9DD"
-            android:progressBackgroundTint="#F6AEB7"/>
+            app:trackThickness="6dp"
+            app:indicatorColor="#F5F5F5"
+            app:trackColor="#F5C3C7"/>
 
     </LinearLayout>
     
@@ -68,10 +69,10 @@
         android:background="@drawable/top_right_circle">
 
         <ImageView
-            android:layout_width="22dp"
-            android:layout_height="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/outline_arrow_outward_24"/>
+            android:src="@drawable/outline_arrow_outward_24" />
 
     </FrameLayout>
 

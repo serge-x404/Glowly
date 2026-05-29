@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/analyzerMain"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".main.analyzer.Analyzer">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="Analyzer"
+                app:titleTextAppearance="@style/TextAppearance.Aurea.HeadlineMedium"
+                app:titleCentered="true"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="180dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan Your Face"
+            android:textColor="@color/md_theme_green_40"
+            style="@style/TextAppearance.Aurea.HeadlineSmall"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/person_scan"
+            android:contentDescription="Scanner"
+            android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:paddingBottom="60dp">
+
+            <ImageView
+                android:id="@+id/openCamera"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_menu_camera"
+                android:contentDescription="Open camera"
+                app:tint="@color/md_theme_green_40"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:src="@drawable/analyzer"
+                android:contentDescription="Start scanning"
+                android:background="@drawable/circle"
+                android:backgroundTint="@color/md_theme_green_40"
+                android:padding="12dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/openGallery"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:contentDescription="Open gallery"
+                app:tint="@color/md_theme_green_40"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

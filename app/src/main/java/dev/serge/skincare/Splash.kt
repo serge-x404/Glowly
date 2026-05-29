@@ -23,7 +23,8 @@ class Splash : AppCompatActivity() {
         }
         binding.navigateToOnBoarding.setOnClickListener {
             startActivity(
-                Intent(this, OnBoarding::class.java)
+//                Intent(this, OnBoarding::class.java)
+                Intent(this, MainActivity::class.java)
             )
         }
     }

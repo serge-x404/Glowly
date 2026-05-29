@@ -51,4 +51,5 @@ dependencies {
     // Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.9.8")
     implementation("androidx.navigation:navigation-ui-ktx:2.9.8")
+    implementation("com.google.android.material:material:1.14.0")
 }
