@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendarItem"
+    android:layout_width="60dp"
+    android:layout_height="72dp"
+    android:layout_marginHorizontal="4dp"
+    android:gravity="center"
+    android:background="@drawable/selected_date"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wed"
+        style="@style/TextAppearance.Aurea.TitleSmall"/>
+    
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        style="@style/TextAppearance.Aurea.TitleMedium"
+        android:layout_marginTop="2dp"/>
+
+</LinearLayout>

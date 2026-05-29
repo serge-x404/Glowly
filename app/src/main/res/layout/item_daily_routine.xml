@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="20dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/routine_bg"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/product_bg"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/hand_soap"/>
+    
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/typeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Moisturizer"
+            style="@style/TextAppearance.Aurea.LabelMedium"/>
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunon Skin Moisturizer"
+            style="@style/TextAppearance.Material3.TitleMedium"/>
+
+    </LinearLayout>
+    
+    <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/circularProgress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:progress="100"
+            app:indicatorSize="52dp"
+            app:indicatorInset="0dp"
+            app:trackThickness="5dp"
+            app:indicatorColor="@color/md_theme_green_40"/>
+        
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="100%"
+            style="@style/TextAppearance.Material3.TitleMedium"/>
+
+    </FrameLayout>
+
+</LinearLayout>

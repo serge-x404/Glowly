@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import dev.serge.skincare.R
 import dev.serge.skincare.databinding.FragmentHomeMainBinding
 
@@ -38,6 +41,48 @@ class HomeMain : Fragment() {
     ): View {
         binding = FragmentHomeMainBinding.inflate(layoutInflater)
         val root = binding.root
+        val dates = listOf(
+            Calendar("Sat","7"),
+            Calendar("Sun","8"),
+            Calendar("Mon","9"),
+            Calendar("Tue","10"),
+            Calendar("Wed","11"),
+            Calendar("Thu","12"),
+            Calendar("Fri","13"),
+            Calendar("Sat","14")
+        )
+
+        binding.dateRecyclerView.layoutManager =
+            LinearLayoutManager(
+                requireContext(),
+                RecyclerView.HORIZONTAL,
+                false
+            )
+
+        val dateAdapter = CalendarAdapter(dates)
+        binding.dateRecyclerView.adapter = dateAdapter
+
+        val skin = listOf(
+            SkinCondition("Acne",85,"High"),
+            SkinCondition("Oily",70,"Low"),
+            SkinCondition("Wrinkles",90,"High"),
+            SkinCondition("Dry",65,"High")
+        )
+
+        val skinAdapter = SkinConditionAdapter(skin)
+        binding.skinConditionRecycler.layoutManager =
+            GridLayoutManager(requireContext(),2)
+        binding.skinConditionRecycler.adapter = skinAdapter
+
+        val dailyRoutineList = listOf(
+            DailyRoutine(R.drawable.hand_soap,"Moisturizer","Sunon skin",100),
+            DailyRoutine(R.drawable.hand_soap,"Lotion","Sunscreen",80),
+            DailyRoutine(R.drawable.hand_soap,"Moisturizer","Skin moisturizer",45)
+        )
+        val dailyRoutineAdapter = DailyRoutineAdapter(dailyRoutineList)
+        binding.dailyRoutineRecycler.layoutManager =
+            GridLayoutManager(requireContext(),1)
+        binding.skinConditionRecycler.adapter = dailyRoutineAdapter
         return root
     }
 
