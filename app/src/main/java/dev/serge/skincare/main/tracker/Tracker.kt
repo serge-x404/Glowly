@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import dev.serge.skincare.R
 import dev.serge.skincare.databinding.FragmentTrackerBinding
+import java.time.LocalDate
+import java.time.YearMonth
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -41,6 +43,16 @@ class Tracker : Fragment() {
         return root
     }
 
+//    private fun updateCalendar() {
+//
+//        binding.currentMonth.text =
+//            getCurrentMonth(currentMonth)
+//
+//        adapter?.updateList(
+//            getCalendarDays(currentMonth)
+//        )
+//    }
+
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -59,5 +71,49 @@ class Tracker : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+
+    private fun getCalendarDays(currentMonth: YearMonth): MutableList<CalendarDay> {
+
+        val items = mutableListOf<CalendarDay>()
+
+        val firstDate = currentMonth.atDay(1)
+
+        val daysInMonth =
+            currentMonth.lengthOfMonth()
+
+        val firstDayOfWeek =
+            firstDate.dayOfWeek.value % 7
+
+        repeat(firstDayOfWeek) {
+
+            items.add(
+                CalendarDay(null)
+            )
+        }
+
+        for (date in 1..daysInMonth) {
+
+            items.add(
+                CalendarDay(
+                    date = date,
+                    isSelected = date == LocalDate.now().dayOfMonth
+                )
+            )
+        }
+
+        return items
+    }
+
+    fun getCurrentMonth(currentMonth: YearMonth): String {
+
+        val month =
+            currentMonth.month.name
+                .lowercase()
+                .replaceFirstChar {
+                    it.uppercase()
+                }
+
+        return month
     }
 }

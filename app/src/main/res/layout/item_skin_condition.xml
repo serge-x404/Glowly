@@ -9,19 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/skin_card_bg"
-        android:orientation="vertical"
-        android:paddingHorizontal="18dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Acne"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="18dp"
             style="@style/TextAppearance.Aurea.TitleMedium"/>
         
         <View
             android:layout_width="match_parent"
-            android:layout_height="18dp"/>
+            android:layout_height="20dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="85%"
+                android:paddingHorizontal="18dp"
                 style="@style/TextAppearance.Aurea.HeadlineSmall"/>
             
             <TextView
@@ -42,6 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="High"
+                android:paddingHorizontal="18dp"
                 style="@style/TextAppearance.Aurea.HeadlineSmall"/>
 
         </LinearLayout>
@@ -58,14 +61,15 @@
             android:progress="85"
             app:trackThickness="6dp"
             app:indicatorColor="#F5F5F5"
-            app:trackColor="#F5C3C7"/>
+            app:trackColor="#F5C3C7"
+            android:paddingHorizontal="18dp"/>
 
     </LinearLayout>
     
     <FrameLayout
         android:layout_width="56dp"
         android:layout_height="56dp"
-        android:layout_gravity="top|end"
+        android:layout_gravity="end"
         android:background="@drawable/top_right_circle">
 
         <ImageView
